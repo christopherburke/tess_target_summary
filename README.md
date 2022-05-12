@@ -1,2 +1,4 @@
 # tess_target_summary
 Create a combined TESS observed target list over all sectors
+TESS observes a fixed number of targets for a higher time sampling 2minute and 20 second cadence each observing sector. The list of targets by their TESS Input Catalog (TIC) are provided separately for each sector [HERE](https://tess.mit.edu/observations/target-lists/). This python routine reads the target tables in over the network (using urllib.request). Keeps track of each sector that each unique target has been observed, and then generates an ascii table output listing each target, number of sectors that target was observed (for 2min and 20sec modes), and a list of which sectors it was observed. Output is to file tess_target_list_summary.txt.
+Rerun command 'python tess_target_summary.py' to regenerate the summary file when a new sector's target table is available.
